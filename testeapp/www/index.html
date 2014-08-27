@@ -1,46 +1,154 @@
 <!DOCTYPE html>
-<!--
-    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
-
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+  <div data-role="header">
+    <h1>Modelar aqui e enviar para colocar na App</h1>
+    <div data-role="navbar">
+        <ul>
+              <li><a href="#pageone">Home</a></li>
+              <li><a href="#pagetwo">Pagina dois</a></li>
+              <li><a href="#pagetres">Pagina tres </a></li>
+        </ul>
+  </div>
+  </div>
+        
+          
+        
+
+  
+  <div data-role="main" class="ui-content">
+    <p>Digita seu conteu nesse local para poder testar o mesmo </p>
+    <form method="post" action="demoform.asp">
+          <div class="ui-field-contain">
+        <n>
+            <label for="fullname"><strong>Nome completo:</strong></label>
+            <input type="text" name="nomecompleto" id="nomecompleto" placeholder="Digite seu nome ">
+        
+            <label for="bday"><strong>Endereco:</strong></label>
+            <input type="text" name="endereco" id="endereco">
+
+        <label for="bday"><strong>CPF:</strong></label>
+            <input type="text" name="CPF" id="CPF" placeholder="Digite o CPF">
+
+        <label for="bday"><strong>Cidade:</strong></label>
+            <input type="text" name="cidade" id="cidade">
+
+        <label for="bday"><strong>Bairro:</strong></label>
+            <input type="text" name="Bairro" id="Bairro">
+
+        <label for="bday"><strong>Estado:</strong></label>
+            <input type="text" name="Estado" id="Estado">
+        
+        <label for="bday"><strong>CP:</strong></label>
+            <input type="text" name="cp" id="cp">        
+        
+        <label for="bday"><strong>Telefone:</strong></label>
+            <input type="text" name="bday" id="bday" placeholder="cell / telefone fixo">
+
+        <label for="bday"><strong>Data Nasc:</strong></label>
+            <input type="date" name="bday" id="bday">
+
+            <label for="email"><strong>E-mail:</strong></label>
+           <input type="email" name="email" id="email" placeholder="Digite seu email..">
+        
+        <fieldset data-role="controlgroup">
+                  <legend><strong>Escolha o genero:</strong></legend>
+                    <label for="male">Masculino</label>
+                 <input type="radio" name="gender" id="male" value="male">
+                 <label for="female">Feminino</label>
+                 <input type="radio" name="gender" id="female" value="female">    
+              </fieldset>
+ 
+         </div>
+
+        
+      </div>
+        <button class="btn">Salvar dados</button>
+     </form>
+
+     <div data-role="main" class="ui-content">
+            <a href="#pagetwo">Go to Page Two</a><br>
+        <a href="#pagetres">tres</a>
+      </div>
+    <div data-role="footer">
+        <h1>Arrobatecinformatica</h1>
+    </div>
+
+
+
+</div>
+  
+<div data-role="page" id="pagetwo">
+  <div data-role="main" class="ui-content">
+    <a href="#pageone">aguardando conteudo novo para essa pagina </a>
+  </div>
+</div>
+
+
+
+<div data-role="page" id="pagetres">
+        <div data-role="header">
+                <h1>Iniciando nova tela</h1>
+                <div data-role="navbar">
+                    <ul>
+                          <li><a href="#pageone">Home</a></li>
+                           <li><a href="#pagetwo">Page Two</a></li>
+                                    <li><a href="#pagetres">Pagina Dois</a></li>
+                    </ul>
+                  </div>
+          </div>
+
+        
+
+
+
+        <div data-role="panel" id="myPanel"> 
+                <h2>Panel Header</h2>
+                pode fachar 
+                <div>
+            <fieldset data-role="controlgroup">
+                <legend>vejas os prefixos mais usados :</legend>
+                  <label for="red">Manhã</label>
+                  <input type="checkbox" name="favcolor" id="red" value="red">
+                  <label for="green">Tarde</label>
+                 <input type="checkbox" name="favcolor" id="green" value="green">
+                  <label for="blue">Noite</label>
+                  <input type="checkbox" name="favcolor" id="blue" value="blue">    
+                  </fieldset>
             </div>
+          </div>    
+
+              <div data-role="main" class="ui-content">
+                <p>Click on the button below to open the Panel.</p>
+                <a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Ver historico</a>
+
+             
+            
+          </div>
+
+
+  <div data-role="main" class="ui-content">
+    <a href="#pageone">Volta a pagina inicial</a>
+  </div>
+         <div data-role="footer">
+            <h1>Arrobatecinformatica</h1>
+
+                
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+
+</div>
+    
+
+</div>
+
+</body>
 </html>
